@@ -1,0 +1,170 @@
+	<html> 
+	<head> 
+            <style>
+                body{
+                    background-image: url('images/back3.jpg');
+                    background-size: cover;
+                    background-attachment: fixed;
+                
+                }
+            </style>
+	<title> Ordering items</title> 
+	<script> 
+	function hidall(){ 
+	var x=document.getElementById("sel"); 
+	if(x.selectedIndex==0){ 
+	document.getElementById("submit").style.visibility = "visible"; 
+	document.getElementById("nsub").style.visibility = "hidden"; 
+	}else{ 
+	document.getElementById("nsub").style.visibility = "hidden"; 
+	document.getElementById("cardn").style.visibility = "visible"; 
+	document.getElementById("proid").style.visibility = "visible"; 
+	document.getElementById("cvv").style.visibility = "visible"; 
+	document.getElementById("expdt").style.visibility = "visible"; 
+	document.getElementById("submit").style.visibility = "visible"; 
+	} 
+	} 
+	</script> 
+	</head> 
+	<body>
+            
+	<center>
+            <h1 style="color:red; font-family:times new roman; font-size:32px; font-weight:bold; font-style:italic;">
+                Ordering Item
+            </h1> 
+            
+            <a href="http://localhost:8080/software_engineering_project/newhtml.html" style="color:blue; font-family:times new roman; font-size:20px; font-weight:bold">
+                  Home
+    </a> 
+            
+	<br>
+	<form action="BookProduct" method="POST"> 
+	<table> 
+	<tr>  
+
+	<td> 
+            
+	<tr> 
+            <td> Product name </td>
+            <td><select name='Product_name'>
+            <option>Double Mango</option>
+            <option>White Forest</option>
+            <option>Premium Cashew</option>  
+            <option>Chocolate Fudge</option>
+            <option>Triple Layer Chocolate</option>
+            <option>Strawberry</option>  
+            <option>Nuts Overload</option>
+            <option>Caramel Sutra</option>
+            <option>Vanilla Breaker</option>  
+            <option>Raspberry</option>
+            <option>White Chocolate</option>
+            <option>Mango Divine</option>  
+            <option>Choco Vanilla</option>
+            <option>Daiquiri Ice</option>
+            <option>German Chocolate</option>  
+            <option>Chocolate Chip</option>
+            <option>Lime Ice</option>
+            <option>Rainbow Sherbet</option>  
+            <option>Quaterback Crunch</option>
+            <option>Ice on Cake</option>  
+            </select>
+        </tr> 
+        
+        
+        <tr> 
+            <td> Product id </td>
+            <td><select name='proid'>
+            <option>DM_1001</option>
+            <option>WF_1002</option>
+            <option>PC_1003</option>  
+            <option>CF_1003</option>
+            <option>TLC_1101</option>
+            <option>S_1102</option>  
+            <option>NO_1103</option>
+            <option>CS_1104</option>
+            <option>VB_1201</option>  
+            <option>R_1202</option>
+            <option>WC_1203</option>
+            <option>MD_1204</option>  
+            <option>CV_1301</option>
+            <option>DI_1302</option>
+            <option>GC_1303</option>  
+            <option>CC_1304</option>
+            <option>LI_1401</option>
+            <option>RS_1402</option>  
+            <option>QC_1403</option>
+            <option>IOC_1002</option>   
+            </select>
+        </tr>
+	
+	<tr> 
+	<td> Customer name</td> 
+	<td> <input name='Customer_name' type='text'> </td> 
+	</tr> 
+        
+        <tr>
+	<td>Phone</td>
+	<td><input type="text" name="phone"></td>
+	</tr>
+	
+	<tr> 
+	<td>Delivery Details </td> 
+        <td><textarea name='Delivery_Details'></textarea></td> 
+	</tr> 
+        
+	<tr> 
+	<td> Payment Details </td>
+        <td> <select name='Payment_Details' id="sel"> 
+	<option>C O D</option> 
+	<option>VISA</option> 
+	<option>Credit</option> 
+	</select> 
+	</tr> 
+	<br> 
+	<tr style="visibility: hidden;" id="cardn"> 
+	<td> Card name</td> 
+	<td><input name="Card_name" type="text"> 
+	</td> 
+	</tr> 
+	<tr style="visibility: hidden;" id="proid"> 
+	<td> Card no</td> 
+	<td><input id="Product_id" type='text' name="Card_no"> 
+	
+	</td> 
+	</tr> 
+	
+	<tr style="visibility: hidden;" id="cvv"> 
+	<td> 
+	CVV</td> 
+	<td><input name='CVV' type='text'> 
+	</td> 
+	</tr> 
+	
+	<tr style="visibility: hidden;" id="expdt"> 
+	<td> 
+	Exp.dt</td> 
+	<td> <input name='Exp.dt' type='text' > 
+	
+	</td> 
+	</tr> 
+	<br> 
+	<tr style="visibility: hidden;" id="submit"> 
+	<td> 
+	<input type='submit'value='submit' formaction='orderId.jsp'/>
+        </td> 
+       
+	<td><input type='reset'value='reset'/> 
+            
+	</td> 
+	</tr> 
+	<tr id="nsub"> 
+	
+            <td>
+	<input type="button" value='next' name="next" onclick="hidall()"/></td> 
+	<td> 
+	<input type="reset" value='reset'/> 
+	</td> 
+	</tr></table></form></center> 
+	</body> 
+	</html> 
+

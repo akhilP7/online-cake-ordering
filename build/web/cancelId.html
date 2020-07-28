@@ -1,0 +1,44 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+    
+        <title>Order Page</title>
+        <style>
+            body{
+             background-image:url('images/back3.jpg');
+             background-size:cover;
+             background-attachment: fixed;
+            }
+            main{
+               justify-content:center;
+                align-item:center;
+                text-align: center;
+                
+            }
+        </style>
+    </head>
+    <body>
+        <main> 
+        <h1>Your Order is successfully Canceled</h1>
+        <label>Your Cancellation ID is:</label>
+        <a id="orderNum"></a><br>
+  
+        Please Save this Cancellation Id for future support<br>
+        Thank you for your valuable service<br>
+                 <br>
+       
+
+<script>
+
+  var x = Math.floor((Math.random() * 100000) + 1);
+  document.getElementById("orderNum").innerHTML = x;
+
+</script>
+
+<form>
+<input type='submit' value="Continue with shopping" formaction='newhtml.html'/> 
+</form>
+        </main>
+    </body>   
+</html>
